@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+* {
+    line-height: 20px;
+    font-size: 15px;
+    color: black;
+}
+html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+/* div.whatsapp {
+    background-color: rgb(21, 129, 21);
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    top: 85%;
+    left: 3.5%;
+    border: 3px solid black;
+    border-radius: 25px;
+    opacity: 75%;
+    
+} */
+/* div.whatsapp a {
+    background-color: white;
+    width: 44px;
+    height: 43px;
+    justify-content: center;
+    position: fixed;
+    top: 483px;
+    left: 38px;
+} */
+div.whatsapp a i:hover {
+    background:green;
+}
+div.whatsapp a i {
+    font-size: 40px;
+    position: fixed;
+    top: 85%;
+    left: 5%;
+    color: white;
+    background-color: rgb(68, 201, 68);
+    border: 3px solid black;
+    border-radius: 40px;
+    padding: 8px;
+}
+div.whatsapp a i span {
+    position: relative;
+    bottom: 13px;
+    font-size: 18px;
+    color: white;
+}
+.in-layar {
+    width: 100%;
+    margin: auto;
+}
+.full-layar {
+    width: 100%;
+}
+nav {
+    background-color: white;
+    opacity: 90%;
+    z-index: 100;
+    text-align: center;
+    position: fixed;
+    box-shadow: 1px 3px 10px 1px black;
+    line-height: 600px;
+    width: 100%;
+}
+/* nav .white {
+    background-color: white;
+} */
+nav .logo {
+    display: flex;
+    justify-content: right;
+    float: left;
+    position: relative;
+    left: 200px;
+    text-align: center;
+    margin: 0px;
+}
+nav .logo img {
+    vertical-align: middle;
+    width: 100px;
+    border: 0px solid black;
+    border-radius: 50px;
+}
+nav .menu {
+    /* float: right; */
+    /* height: 60px; */
+    /* max-width: 600px; */
+    /* padding: 18px 0px 18px 18px; */
+    position: relative;
+    padding-top: 20px;
+    /* left: 45px; */
+}
+nav .menu ul {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .menu ul li {
+    list-style-type: none;
+    float: left;
+    padding: 20px 8px;
+    /* line-height: 60px; */
+}
+/* nav .menu ul li.gal, li.dec {
+    background-color: black;
+    margin: 0;
+    border: 2px solid black;
+    padding: 10px 10px;
+} */
+nav ul li a {
+    text-align: center;
+    /* padding: 0px 16px 0px 16px ; */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+nav ul li.informasi a{
+    position: relative;
+    padding: 10px 15px;
+    color: white;
+    left: 35px;
+    font-weight: bold;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+nav ul li.informasi a:hover {
+    background-color: rgb(127, 127, 133);
+}
+nav ul li.normal a:hover {
+    text-decoration: underline 2px;
+    color: rgb(127, 127, 133);
+    transition: all 0.2s ease;
+}
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+header .pembukaan {
+    z-index: 100;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 27%;
+}
+/* header .pembukaan h3 {
+    background-image: linear-gradient(rgb(21, 95, 243), rgb(120, 190, 204));
+    width: 40%;
+    border-radius: 15px;
+    font-family: cursive;
+    font-size: 15px;
+    margin: 15px auto 5px;
+    padding: 5px 0px;
+} */
+header .pembukaan img {
+    width: 200px;
+}
+header .pembukaan .paragraf {
+    color: white;
+    font-size: 20px;
+    font-family: monospace;
+    font-style: italic;
+}
+.button {
+    background-color: black;
+    height: 40px;
+    line-height: 42px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 15px;
+    font-family: monospace;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.button:hover {
+    background-color: rgb(127, 127, 133);
+    transition: all 0.2s;
+}
+.button:active {
+    background-color: transparent;
+    color: black;
+}
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 50%;
+    z-index: -1;
+}
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1.7rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.tombol-menu .garis {
+    position: relative;
+    width: 35px;
+    height: 4px;
+    background-color: black;
+}
+.dropdown-content {
+    display: none;
+}
+section {
+    padding: 55px 0px;
+}
+section h3 {
+    font-size: 20px;
+    line-height: 25px;
+}
+#aboutus, #time {
+    text-align: center;
+    padding: 90px 0px;
+}
+section h3 {
+    background-color: black;
+    color: white;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main{
+    margin: 0;
+    padding: 0px 100px;
+    position: relative;
+}
+#aboutus .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110%;
+    width: 100%;
+    background-image: url(Asset/dekorasi.jpeg);
+    object-fit: cover;
+    border-top: 2px solid white;
+    opacity: 20%;
+    z-index: -1;
+}
+/* #aboutus{
+    background-image: url(Asset/dekorasi.jpeg);
+    z-index: -1;
+    opacity: 30%; */
+    /* background-color: rgb(249, 112, 199); */
+/* } */
+#aboutus .in-layar img {
+    float: right;
+    width: 200px;
+    height: 200px;
+    border: 5px solid;
+    border-radius: 50px;
+    box-shadow: 1px 2px 15px 5px;
+    padding: 5px;
+}
+/* section p.rangkuman {
+    font-style: italic;
+    font-size: 15px;
+    padding: 0px;
+    color: rgb(235, 234, 235);
+} */
+/* section .isi-konten p.p1 {
+    font-style: normal;
+    padding: 0px 0px 15px;
+    font-family: sans-serif;
+    font-size: 20px;
+    /* text-align: center; */
+    /* border-bottom: 1px solid yellow;
+} */ */
+
+/* #aboutus .in-layar .isi-konten{
+    position: relative;
+    justify-content: space-around;
+} */
+/* #aboutus .in-layar .isi-konten ul {
+    display: flex;
+    position: relative;
+    width: 50%;
+    margin: 0px auto;
+} */
+#aboutus .in-layar {
+    display: block;
+    position: relative;
+}
+#aboutus .in-layar article {
+    width: 50%;
+    float: left;
+    font-family: "Cabin", serif;
+    font-weight: bold;
+    padding: 20px;
+
+}
+section.lestari-decoration {
+    margin: 150px 0px;
+    background: url(Asset/wedding1-2.jpeg) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    /* font-size: 1000px; */
+    /* font-style: italic; */
+    padding: 80px 0px;
+    box-shadow: inset 1px 10px 25px 6px black;
+}
+section.lestari-decoration p {
+    font-size: 25px;
+    font-style: italic;
+    background-image: linear-gradient(rgb(14, 14, 15), rgb(78, 71, 71));
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    width: 50%;
+    margin: 0px auto 0px;
+    padding: 20px;
+    line-height: 40px;
+}
+section.lestari-decoration p span {
+    font-size: 40px;
+    color: white;
+}
+section .tabel {
+    background-image: url(Asset/foto_last.png);
+    opacity: 100%;
+    border-collapse: collapse;
+    width: 85%;
+    margin: 25px auto 0px;
+    /* padding: 100px; */
+}
+/* section .tabel tr:nth-child(even) {
+    background-color: rgb(28, 28, 28);
+} */
+.tabel tr th {
+    padding: 15px;
+    font-size: 30px;
+    font-family: monospace;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+}
+.tabel tr th img {
+    width: 100%;
+    border: 5px solid black;
+    border-radius: 40px;
+}
+.tabel tr td {
+    padding: 6px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    opacity: 50%;
+}
+section .tabel-2 {
+    /* border-collapse: collapse; */
+    width: 90%;
+    margin: 5px auto;
+}
+section .tabel-2 tr th {
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 3px solid black;
+}
+section .tabel-2 tr td {
+    padding: 10px;
+    border: 3px solid black;
+    color: black;
+    z-index: -1;
+    font-weight: 600;
+    background-color: pink ;
+    opacity: 70%;
+}
+section .tabel-2 tr td span {
+    font-style: normal;
+    font-size: 16px;
+    font-family: monospace;
+}
+section .tabel-2 tr td span:hover {
+    color: rgb(236, 231, 231);
+}
+section .tabel-2 tr td.td-last {
+    background-color: transparent;
+    padding: 40px 10px;
+    font-style: italic;
+    /* font-weight: bold; */
+    border: none;
+}
+tr td button {
+    font-family: monospace;
+    background-color: green;
+    color: yellow;
+    padding: 15px 50px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+tr td button:hover {
+    background-color: rgb(20, 160, 20);
+}
+tr td button:active {
+    background-color: rgb(20, 160, 20);
+}
+footer {
+    background-color: black;
+}
+footer .foot2 p {
+    color: white;
+    text-align: center;
+    font-family: "Cabin", serif;
+    margin: 0px;
+    padding: 10px;
+}
+footer .foot2 p span {
+    font-size: 18px;
+    color: white;
+    position: relative;
+    top: 2px;
+}
+.foot {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 30px 0px;
+}
+.footer1, .footer2, .footer3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foot div {
+    display: inline-block;
+    margin: 0;
+    padding: 20px;
+}
+.foot h5, .foot p, .foot h1, .foot i {
+    color: white;
+    font-family: "Cabin", serif;
+}
+.foot .footer1 a {
+    position: relative;
+    top: 5px;
+}
+.foot .footer3 a, .foot .footer3 a i {
+    text-decoration: none;
+    color: white;
+}
+.foot .footer3 a:hover {
+    text-decoration: underline;
+}
+.foot form label{
+    color: white;
+}
+.foot form .button {
+    background-color: white;
+    color: black;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.foot form .button:hover {
+    background-color: rgb(127, 127, 133);
+}
+.foot h1 i {
+    padding: 0px 5px;
+    font-size: 20px;
+}
+.foot ul li i {
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+.foot ul li a {
+    text-decoration: none;
+}
+.foot img {
+    width: 300px;
+    height: 300px;
+}
+footer h1.hfirst {
+    font-size: 40px;
+    line-height: 40px;
+}
+.footer1, .footer2, .footer3 {
+    width: 350px;
+}
+
+@media screen and (max-width: 1100px) {
+    .footer1, .footer2, .footer3 {
+        text-align: center;
+        width: 90%;
+    }
+    .foot img {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        bottom: 0px;
+    }
+    #aboutus .in-layar img {
+        padding: 0;
+        margin: auto;
+        display: block;
+        float: none;
+        width: 150px;
+        height: 150px;
+        border-radius: 50px;
+    }
+    #aboutus .in-layar article {
+        padding: 30px 0px;
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    section.lestari-decoration {
+        display: block;
+        margin-top: 0;
+        background: url(Asset/wedding1-2.jpeg) no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        /* font-size: 1000px; */
+        /* font-style: italic; */
+        padding: 80px 0px;
+        box-shadow: inset 1px 10px 25px 6px black;
+    }
+    .in-layar {
+        width: 100%;
+    }
+    nav .logo {
+        /* float: left; */
+        position: relative;
+        left: 20px;
+        /* right: 10px; */
+        /* text-align: center; */
+        padding: 0;
+    }
+    nav .logo img {
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+    nav .menu ul {
+        display: none;
+    }
+    .tombol-menu {
+        display: flex;
+        margin: 15px;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 20px;
+        background-color: rgb(180, 80, 80);
+        min-width: 200px;
+        z-index: 999;
+    }
+    .dropdown-content a{
+        padding: 12px 16px;
+        color: white;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        border: 1px solid white;
+    }
+    .dropdown-content a:hover {
+        background-color: black;
+        transition: all 0.3s ease;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    section h3 {
+        background-color: black;
+        color: white;
+        width: 90%;
+        margin: 40px auto;
+        padding: 10px;
+        font-size: 15px;
+    }
+    #aboutus, #schedule, #decoration {
+        text-align: center;
+    }
+    main{
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+    #decoration .tabel-2 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .tabel-2 tr th {
+        padding: 0;
+        margin: 0;
+    }
+    .tabel-2 tr td {
+        font-size: 10px;
+        padding: 2px 3px;
+        margin: 0;
+    }
+    section .tabel {
+        /* border-collapse: collapse; */
+        border: 2px solid ;
+        width: 60%;
+        margin: 20px auto 0px;
+        padding: 1px;
+    }
+    .tabel tr th {
+        padding: 10px;
+        font-size: 20px;
+        font-family: monospace;
+        background-color: black;
+        color: white;
+    }
+    .foot {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

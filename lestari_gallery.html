@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Lestari</title>
+    <link rel="stylesheet" href="font.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: white;
+            opacity: 90%;
+            position: fixed;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-weight: bold;
+            font-size: 20px;
+            border-bottom: 2px solid black;
+            box-shadow: 0px 1px 10px 1px black;
+        }
+        /* nav .div1, nav .div2 {
+            position: fixed;
+        } */
+        nav .div1 {
+            display: flex;
+            color: black;
+        }
+        nav .div1 p {
+            background-color: rgb(222, 218, 218);
+            padding: 15px;
+            font-family: monospace;
+        }
+        nav .div1 p span {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            position: relative;
+            right: 15px;
+        }
+        nav .div2 {
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            padding: 30px 40px;
+        }
+        nav .div2 a {
+            text-decoration: none;
+            text-align: center;
+            color: black;
+        }
+        nav .div2 a:hover {
+            text-decoration: underline;
+            color: rgb(127, 127, 133);
+            transition: all 0.2s ease;
+        }
+        .layar_utama {
+            margin: auto;
+            padding-top: 75px;
+            background-image: url(Asset/dekorasi.jpeg);
+        }
+        
+        section.fontCabin {
+            text-align: center;
+            color: white;
+        }
+        section.fontCabin h1 {
+            padding: 30px;
+            color: white;
+            margin-bottom: 20px;
+            border-bottom: 5px solid white;
+            border-top: 2px solid black;
+            text-shadow: 5px 2px 1px black;
+        }
+        .layar_utama section img {
+            background-color: white;
+            width: 225px;
+            height: 225px;
+            padding: 10px;
+            margin: 10px;
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+        .layar_utama img:active {
+            width: 250px;
+            height: 250px;
+        }
+        .galeridekor {
+            background-color: white;
+            display: block;
+            padding-bottom: 100px;
+        }
+        .galeridekor h1 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px 0px;
+        }
+        .galeridekor h2 {
+            text-align: center;
+        }
+        .galeridekor a {
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            margin: 30px auto;
+            text-decoration: none;
+            text-align: center;
+            background-color: rgb(67, 218, 67);
+            border-radius: 40px;
+            padding: 10px;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+        }
+        .galeridekor a:hover {
+            background-color: rgb(22, 123, 22);
+        }
+        .galeridekor .div_1, .galeridekor .div_2, .galeridekor .div_3, .galeridekor .div_4 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .galeridekor div {
+            padding: 0;
+            margin: 0;
+        }
+        .galeridekor div div img {
+            width: 300px;
+            height: 300px;
+        }
+        .galeridekor div div div {
+            font-size: 13px;
+            width: 150px;
+        }
+        .galeridekor div div div p {
+            font-family: monospace;
+        }
+        .galeridekor div div div p.harga {
+            font-weight: bold;
+            padding: 5px;
+        }
+
+
+
+        .galeridekor .div_1 div img {
+            padding: 0;
+            float: left;
+            
+        }
+        .galeridekor .div_1 div div {
+            float: right;
+            padding: 25px;
+        }
+        .galeridekor .div_2 div img {
+            padding: 0;
+            float: left;
+            
+        }
+        .galeridekor .div_2 div div {
+            float: right;
+            padding: 25px;
+        }
+        .galeridekor .div_3 div img {
+            padding: 0;
+            float: left;
+            
+        }
+        .galeridekor .div_3 div div {
+            float: right;
+            padding: 25px;
+        }
+        .galeridekor .div_4 div img {
+            padding: 0;
+            float: left;
+            
+        }
+        .galeridekor .div_4 div div {
+            float: right;
+            padding: 25px;
+        }
+
+
+        footer {
+            background-color: black;
+        }
+        footer .foot2 p {
+            color: white;
+            text-align: center;
+            font-family: "Cabin", serif;
+            margin: 0px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+    /* padding: 10px; */
+        }
+        footer .foot2 p span {
+            font-size: 18px;
+            color: white;
+            position: relative;
+            top: 2px;
+        }
+        .foot {
+            display: flex;
+            justify-content: center;
+            /* padding: 30px 30px 0px; */
+        }
+        .foot div {
+            display: inline-block;
+            margin: 0;
+    /* padding: 20px; */
+        }
+        .foot h5, .foot p, .foot h1, .foot i {
+            color: white;
+            font-family: "Cabin", serif;
+        }
+        .foot .footer1 a {
+            position: relative;
+            font-size: 25px;
+            top: 5px;
+            padding: 0px 5px 0px;
+        }
+.foot .footer3 a, .foot .footer3 a i {
+    text-decoration: none;
+    color: white;
+}
+.foot .footer3 a:hover {
+    text-decoration: underline;
+}
+.foot form label{
+    color: white;
+}
+.foot form .button {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: black;
+    margin: 0;
+    padding: 10px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.foot form .button:hover {
+    background-color: rgb(127, 127, 133);
+}
+.foot h1 i {
+    padding: 0px 5px;
+    font-size: 20px;
+}
+.foot ul li i {
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+.foot ul li a {
+    text-decoration: none;
+}
+.foot img {
+    width: 300px;
+    height: 300px;
+}
+.footer1, .footer2, .footer3 {
+    width: 350px;
+}
+
+        @media screen and (max-width: 1100px){
+            nav {
+                flex-direction: column;
+                display: flex;
+            }
+            nav div{
+                margin:0 auto;
+            }
+            nav .div2 {
+                display: contents;
+            }
+            nav .div2 a {
+                padding: 10px;
+            }
+            section.fontCabin {
+                text-align: center;
+            }
+            .layar_utama .fontCabin img {
+                width: 200px;
+                height: 200px;
+            }
+            .layar_utama {
+                padding-top: 250px;
+            }
+            .galeridekor .div_1 {
+                display: flex;
+                flex-direction: column;
+            }
+            .galeridekor .div_2 {
+                display: flex;
+                flex-direction: column;
+            }
+            .galeridekor .div_3 {
+                display: flex;
+                flex-direction: column;
+            }
+            .galeridekor .div_4 {
+                display: flex;
+                flex-direction: column;
+            }
+            .foot img {
+                width: 200px;
+                height: 200px;
+        /* position: relative;
+        bottom: 0px; */
+            }
+            .footer1, .footer2, .footer3 {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                width: 90%;
+
+            }
+            .foot {
+                display: flex;
+                flex-direction: column;
+            }
+            .galeridekor .div_1 div img {
+            padding: 0;
+            float: none;
+            
+            
+        }
+        .galeridekor .div_1 div div {
+            float: none;
+            padding: 25px;
+        }
+        .galeridekor .div_2 div img {
+            padding: 0;
+            float: none;
+            
+        }
+        .galeridekor .div_2 div div {
+            float: none;
+            padding: 25px;
+        }
+        .galeridekor .div_3 div img {
+            padding: 0;
+            float: none;
+            
+        }
+        .galeridekor .div_3 div div {
+            float: none;
+            padding: 25px;
+        }
+        .galeridekor .div_4 div img {
+            padding: 0;
+            float: none;
+            
+        }
+        .galeridekor .div_4 div div {
+            float: none;
+            padding: 25px;
+        }
+        .galeridekor div div {
+            width: 100%;
+            text-align: center;
+        }
+        .galeridekor div div div{
+            margin: 0px auto;
+            font-size: 20px;
+            width: 70%;
+            border-bottom: 2px solid black;
+        }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="Asset/Silent Night - The Soundlings.mp3" type="audio/mp3">
+    </audio>
+    <nav class="fontCabin">
+        <div class="div1">
+            <p><span>LESTARI</span> DECORATION</p>
+        </div>
+        <div class="div2">
+            <a href="#Galeri">GALLERY</a>
+            <a href="#Pricelist">PRICE LIST</a>
+            <a href="lestari_info.html">DECORATION</a>
+            <a href="index.html">HOME</a>
+        </div>
+    </nav>
+    <div class="layar_utama" >
+        
+        <section class="fontCabin">
+            <h1 id="Galeri">GALLERY WEDDING LESTARI DECORATION</h1>
+            <img src="Asset/dekorasi_5.png" alt="foto">
+            <img src="Asset/dekorasi_4.png" alt="foto">
+            <img src="Asset/dekorasi_11.png" alt="foto">
+            <img src="Asset/dekorasi_8.png" alt="foto">
+            <img src="Asset/dekorasi_12.png" alt="foto">
+            <img src="Asset/dekorasi_10.png" alt="foto">
+            <img src="Asset/dekorasi_13.png" alt="foto">
+            <img src="Asset/dekorasi_14.png" alt="foto">
+        </section>
+        
+        <section id="Pricelist" class="galeridekor">
+            <h1 class="fontCabin">
+                PRICE LIST WEDDING DEKOR LESTARI
+            </h1>
+            <div class="div_1">
+                <div>
+                    <img src="Asset/dekorasi_14.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Dekorasi lamaran temu manten</h2>
+                        <p class="harga">Rp.400.000,00/meter</p>
+                        <p><i>Bunga kering dan artifisial harga permeter.</i></p>
+                    </div>
+                </div>
+                <div>
+                    <img src="Asset/dekorasi_3.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Dekorasi tedhak siten</h2>
+                        <p class="harga">Rp.400.000,00/meter</p>
+                        <p><i>Dekorasi tedhak siten sesuai request.</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="div_2">
+                <div>
+                    <img src="Asset/dekorasi_5.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Dekorasi akad nikah</h2>
+                        <p class="harga">Rp.400.000,00/meter</p>
+                        <p><i>All design by requst.</i></p>
+                    </div>
+                </div>
+                <div>
+                    <img src="Asset/dekorasi_11.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Dekorasi walimatul urusy</h2>
+                        <p class="harga">Rp.400.000,00/meter</p>
+                        <p><i>Harga per meter, all design by requst.</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="div_3">
+                <div>
+                    <img src="Asset/dekorasi_8.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Dekorasi pentas seni</h2>
+                        <p class="harga">By request</p>
+                        <p><i>Dekor panggung all design by requst.</i></p>
+                    </div>
+                </div>
+                <div>
+                    <img src="Asset/dekorasi_15.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Tasyakuran aqiqah</h2>
+                        <p class="harga">Rp.1.800.000,00</p>
+                        <p><i>Menyambut si kecil yang unyu-unyu dengan desain yang unyu-unyu.</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="div_4">
+                <div>
+                    <img src="Asset/dekorasi_17.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Dekor khitan</h2>
+                        <p class="harga">Rp.400.000,00/meter</p>
+                        <p><i>All design by request dekorasi khitan, harga permeter.</i></p>
+                    </div>
+                </div>
+                <div>
+                    <img src="Asset/dekorasi_21.png" alt="foto">
+                    <div class="fontCabin">
+                        <h2>Mini dekorasi nikah</h2>
+                        <p class="harga">Rp.350.000,00/meter</p>
+                        <p><i>Harga permeter, bunga artifisial, all design by request.</i></p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="fontCabin">
+                Mencari item lain? Kirim pesan ke lestari decoration. Melayani design by request.
+            </h2>
+            <a href="https://wa.me/6281233061941" target="_blank"><i class='bx bxl-whatsapp'></i> Kirim pesan</a>
+        </section>
+    </div>
+    <footer class="fontCabin">
+        <div class="foot">
+            <div class="footer1">
+                <h1>
+                    Lestari Decoration
+                </h1>
+                <p>Lokasi lestari decoration berada di Sidoarjo Taman, Lestari Decoration melayani dekorasi pernikahan, khitan, dan hajatan lain, bisa out door maupun in door dengan dekorasi yang sesuai dengan request klien.
+                </p>
+                <p>
+                    Follow kami : <a href="https://www.instagram.com/weddingdecor_lestari/"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://www.facebook.com/yayuk.danzun"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="https://www.tiktok.com/@kang.dekor"><i class='bx bxl-tiktok' ></i></a>
+                </p>
+                <br>
+                <form action="">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email">
+                    <br><br>
+                    <input class="button" type="button" value="SUBSCRIBE">
+                </form>
+            </div>
+            <div class="footer2">
+                <img src="Asset/logolestari.png" alt="logolestari">
+            </div>
+            <div class="footer3">
+                <h1>
+                    Contact Us
+                </h1>
+                <br>
+                <a href="https://www.google.com/maps/@-7.3637331,112.7066634,3a,75y,324.26h,85.28t/data=!3m7!1e1!3m5!1sAgo2MtsDUk495r5BlGlojw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D4.717005187098479%26panoid%3DAgo2MtsDUk495r5BlGlojw%26yaw%3D324.2576252211319!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D"><i class='bx bx-map'></i>Jl. Wage Permai, Sritanjung, Wage, Kec. Taman, KabupatenSidoarjo, Jawa Timur 61257, Indonesia.</a>
+                <br>
+                <a href="https://wa.me/6281233061941" target="_blank"><i class='bx bxl-whatsapp'></i> +6281233061941</a>
+                <br>
+                <a href="https://mail.google.com/mail/u/0/#search/wahyu777widya%40gmail.com"><i class='bx bx-envelope' ></i> wahyu777widya@gmail.com</a>
+            </div>
+        </div>
+        <div class="foot2">
+            <p>copyright <span>&copy</span> 2024 Lestari Decoration.</p>
+        </div>
+    </footer>
+</body>
+</html>
